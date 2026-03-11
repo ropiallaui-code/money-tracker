@@ -71,10 +71,10 @@
       tbody.innerHTML = "";
       transactions.forEach(t => {
         const row = `<tr>
-          <td>${t.type}</td>
-          <td>${t.category}</td>
-          <td>${t.amount}</td>
-          <td>${t.date}</td>
+          <td>P{t.type}</td>
+          <td>P{t.category}</td>
+          <td>P{t.amount}</td>
+          <td>P{t.date}</td>
         </tr>`;
         tbody.innerHTML += row;
       });
@@ -88,7 +88,7 @@
       let balance = income - expense;
 
       document.getElementById("summary").innerText =
-        `Income: ${income} | Expense: ${expense} | Balance: ${balance}`;
+        `Income: P{income} | Expense: P{expense} | Balance: P{balance}`;
     }
 
      
